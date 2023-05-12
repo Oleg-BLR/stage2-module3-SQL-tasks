@@ -24,6 +24,13 @@ SELECT DISTINCT student.name, student.birthday, paymenttype.name FROM payment JO
 --select s.id, s.name, s.birthday, s.groupnumber from student as s
 --    INNER JOIN payment as p ON s.id = p.student_id
 --    GROUP BY s.id, p.type_id HAVING p.type_id in (select id from paymenttype where name = 'WEEKLY');
+SELECT DISTINCT student.name, mark.mark, subject.name FROM mark JOIN student ON mark.student_id = student.id JOIN subject ON mark.subject_id = subject.id WHERE subject.name = 'Math';
+--6.4.2
+--select s.id, s.name, s.birthday, s.groupnumber from student as s
+--    INNER JOIN Mark as m
+--    ON s.id = m.student_id WHERE m.subject_id = (select id from subject where name = 'Math');
+--6.4.3
+--SELECT * FROM mark AS m JOIN subject AS s ON m.subject_id = s.id JOIN student AS st ON m.student_id = st.id WHERE s.name = 'Math';
 
 
 
