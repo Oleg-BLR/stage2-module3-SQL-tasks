@@ -9,8 +9,8 @@ SELECT AVG(mark) FROM mark WHERE subject_id = (select id from subject WHERE name
 --SELECT subject_id, AVG(mark) FROM mark WHERE subject_id = (select subject_id from subject WHERE name = 'Math') ;
 SELECT MIN(amount) FROM payment WHERE type_id = (select id from paymenttype WHERE name = 'WEEKLY');
 
-
 --for H2
+--SELECT subject_id, mark FROM mark WHERE subject_id = (select id from subject WHERE name = 'Math');
 --select id from subject WHERE name = 'Math';
 --SELECT AVG(mark) FROM mark GROUP BY subject_id  WHERE subject_id = (select id from subject WHERE name = 'Math');
 --SELECT AVG(mark), subject_id FROM mark GROUP BY subject_id;
